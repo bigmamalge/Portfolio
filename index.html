@@ -3,68 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio | Développeur</title>
+    <title>Daulny Malone | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="nav-brand">MonPortfolio.</div>
+        <div class="nav-brand">Daulny Malone.</div>
         <ul class="nav-links">
             <li><a href="#hero">Accueil</a></li>
             <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
             <li><a href="#contact" class="btn-primary">Me contacter</a></li>
         </ul>
     </nav>
 
+    <div id="toast" class="toast">Adresse email copiée dans le presse-papier ! 📧</div>
+
     <header id="hero" class="section hero">
         <div class="hero-content">
-            <h1>Bonjour, je suis un <span class="highlight">Développeur Passionné</span></h1>
-            <p>Je crée des sites web rapides, accessibles et sur-mesure. Transformons vos idées en réalité.</p>
+            
+            <div class="photo-container">
+                <img src="" alt="Photo de Daulny Malone" class="photo-profil" id="ma-photo">
+                <span class="photo-placeholder">Ma Photo Ici</span>
+            </div>
+
+            <h1>Bonjour, je suis <span class="highlight">Daulny Malone</span></h1>
+            <p>Étudiant en BUT Informatique à Laval, passionné par le développement et la création de solutions web et logicielles.</p>
+            
+            <div class="reseaux-sociaux">
+                <a href="https://github.com/bigmamalge" target="_blank" class="btn-icone" title="Mon GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/malone-daulny-455993392/" target="_blank" class="btn-icone" title="Mon LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <button onclick="copierEmail()" class="btn-icone" title="Copier mon email">
+                    <i class="fas fa-envelope"></i>
+                </button>
+            </div>
+
             <div class="hero-buttons">
-                <a href="#projets" class="btn-secondary">Voir mes projets</a>
-                <a href="https://github.com/ton-pseudo" target="_blank" class="btn-outline">Mon GitHub</a>
+                <a href="#projets" class="btn-primary">Voir mes projets</a>
             </div>
         </div>
     </header>
 
     <section id="projets" class="section projets-section">
         <h2>Mes Réalisations</h2>
-        <p class="section-subtitle">Quelques-uns de mes récents projets.</p>
+        <p class="section-subtitle">Quelques-uns de mes projets réalisés en BUT ou en perso.</p>
         
         <div class="grid-projets">
             <article class="carte-projet">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Aperçu projet 1">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Projet 1">
                 <div class="carte-contenu">
-                    <h3>Application E-commerce</h3>
-                    <p>Une boutique en ligne complète avec panier et paiement intégré. Créée pour un client fictif.</p>
+                    <h3>API de Gestion</h3>
+                    <p>Développement d'une API RESTful sécurisée pour la gestion d'utilisateurs et de ressources.</p>
                     <div class="tags">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        <span>Node.js</span><span>Express</span><span>PostgreSQL</span>
                     </div>
                     <a href="#" class="lien-projet">Voir le code ➔</a>
                 </div>
             </article>
 
             <article class="carte-projet">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Aperçu projet 2">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Projet 2">
                 <div class="carte-contenu">
-                    <h3>Dashboard Administrateur</h3>
-                    <p>Une interface de gestion de données avec des graphiques dynamiques en temps réel.</p>
+                    <h3>Projet BUT Info</h3>
+                    <p>Application de gestion interne réalisée dans le cadre de ma formation à Laval.</p>
                     <div class="tags">
-                        <span>React</span><span>Tailwind</span>
+                        <span>Java</span><span>Spring Boot</span>
                     </div>
                     <a href="#" class="lien-projet">Voir le code ➔</a>
                 </div>
             </article>
 
             <article class="carte-projet">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Aperçu projet 3">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Projet 3">
                 <div class="carte-contenu">
-                    <h3>API Météo</h3>
-                    <p>Application qui récupère les données météorologiques via une API publique.</p>
+                    <h3>Script d'automatisation</h3>
+                    <p>Script permettant de traiter des données en masse et de générer des rapports automatiques.</p>
                     <div class="tags">
-                        <span>Node.js</span><span>API</span>
+                        <span>Python</span><span>Docker</span>
                     </div>
                     <a href="#" class="lien-projet">Voir le code ➔</a>
                 </div>
@@ -72,15 +94,46 @@
         </div>
     </section>
 
+    <section id="competences" class="section competences-section">
+        <h2>Technologies & Outils</h2>
+        <p class="section-subtitle">Ce que j'utilise au quotidien pour développer.</p>
+
+        <div class="grid-competences">
+            <div class="boite-competence">
+                <h3>Langages</h3>
+                <div class="liste-icones">
+                    <i class="fab fa-java" title="Java"></i>
+                    <i class="fab fa-python" title="Python"></i>
+                    <i class="fab fa-js" title="JavaScript"></i>
+                    <i class="fab fa-html5" title="HTML5"></i>
+                    <i class="fab fa-css3-alt" title="CSS3"></i>
+                    <i class="fas fa-database" title="SQL / BDD"></i>
+                </div>
+            </div>
+
+            <div class="boite-competence">
+                <h3>Outils & Plateformes</h3>
+                <div class="liste-icones">
+                    <i class="fab fa-github" title="GitHub"></i>
+                    <i class="fab fa-git-alt" title="Git"></i>
+                    <i class="fab fa-docker" title="Docker"></i>
+                    <i class="fab fa-linux" title="Linux"></i>
+                    <i class="fas fa-server" title="Serveurs"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="section contact-section">
         <h2>Prêt à collaborer ?</h2>
-        <p>Je suis actuellement à la recherche de nouvelles opportunités.</p>
-        <a href="mailto:ton.email@exemple.com" class="btn-primary btn-large">M'envoyer un email</a>
+        <p>Je suis toujours ouvert pour discuter de projets ou d'opportunités de stage/alternance.</p>
+        <button onclick="copierEmail()" class="btn-primary btn-large" style="border:none; cursor:pointer; font-family:inherit;">Copier mon adresse email</button>
     </section>
 
     <footer>
-        <p>&copy; 2026 - Conçu à la main par [Ton Nom].</p>
+        <p>&copy; 2026 - Conçu par Daulny Malone.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
